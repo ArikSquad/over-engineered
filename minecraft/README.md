@@ -1,0 +1,2 @@
+# Minecraft Server Runner
+I usually use these scripts when developing a Minecraft server plugin, because I can easily swap out the server jar and whatever prefix or suffix it now has, it will still work.

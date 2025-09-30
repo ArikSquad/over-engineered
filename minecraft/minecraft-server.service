@@ -1,0 +1,24 @@
+[Unit]
+Description=Minecraft Server
+After=network.target
+
+[Service]
+## Change these to your actual path
+WorkingDirectory=/opt/minecraft
+
+# Change these for a text included in your filename
+Environment=PREFIX=paper
+Environment=MIN=1G
+Environment=MAX=4G
+Environment=JVM_OPTS=
+
+# Start via our launcher so matching and envs work
+ExecStart=/usr/bin/env bash -lc './server.sh'
+
+# Run as a dedicated user (create if needed)
+User=minecraft
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
