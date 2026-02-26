@@ -1,11 +1,10 @@
 #include <iostream>
 #include <vector>
-#include <cstdlib>
 
 int main(const int argc, char* argv[]) {
     std::vector<int> a;
     for (int i = 1; i < argc; i++) {
-        a.push_back(std::atoi(argv[i]));
+        a.push_back(std::stoi(argv[i]));
     }
 
     const unsigned long n = std::size(a);
